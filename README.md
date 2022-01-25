@@ -5,14 +5,14 @@ The project is inspired by the following [Medium article](https://medium.com/ini
 ## Functions
  - Control (on/off) of an electric room heater based on whether the room temperature is within a specified temperature band or not
  - Night mode - adapted temperature band during night hours
- - Dashboard to remotely read system state and control to switch on/off system remotely
+ - Dashboard to remotely read system state and control to switch on/off system remotely using Initial State
  
  ## Hardware
  - Raspberry Pi Zero W or better with Raspbian
  - DHT22 temperature sensor (connect data pint to GPIO4 (pin 7), V+ to pin 2 and V-/GND to pin 6)
 
 ## Before running
-- Create an [InitialState](https://www.initialstate.com/) account (free membership for students)
+- Create an [Initial State](https://www.initialstate.com/) account (free membership for students)
 - Install dependencies using the following shell commands:
     - ``sudo apt install python-pip`` (if not already installed)
     - ``\curl -sSL https://get.initialstate.com/python -o - | sudo bash`` - when asked if you want an exampe file, type ``n`` and ``Enter``, then type ``2`` and ``Enter`` to select the [NEW!] option and enter your InitialState credentials
@@ -24,3 +24,6 @@ The project is inspired by the following [Medium article](https://medium.com/ini
 ## Running the script:
 - let it run in the background (detached from shell) using e.g. nohup (``nohup python3 start.py &``)
 - install it as a service (better :+1:)
+
+## Screenshot of Initial State Dashboard
+![Dashboard](initialstate_scrs.jpg "Temperature Control Dashboard")
