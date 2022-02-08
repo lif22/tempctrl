@@ -1,0 +1,13 @@
+[Unit]
+Description=Temperature Control
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=<Insert path of directory where start.py resides>
+User=<Insert user here>
+ExecStart=/usr/bin/python3 <Path to start.py>
+
+[Install]
+WantedBy=multi-user.target
